@@ -1,0 +1,75 @@
+Añadir al diagrama de controlador la factoría de presentación (HECHO)
+
+ULTIMO DIA REVISAR DIAGRAMAS DE SECUENCIA PARA QUE NO HAYA OPERACIONES SIN ESPECIFICAR
+ULTIMO DIA Revisar que todas las carpetas están iguales (imp y entidad)
+ULTIMO DIA Revisar que todas las relaciones se hayan hecho con lo de JPA
+ULTIMO DIA Revisar que en los diagramas de secuencia no haya entidades se sobra (TypedQuery)
+ULTIMO DIA Organizar imports
+
+TODO:
+Añadir a la factoriaAbstractaNegocio los sa nuevos (A lo mejor renta mas una unica funcion con un switch?)
+Falta la funcion polimorfica de Empleado (CalcularSueldo puede ser una funcion abstracta, implementada por las especificaciones de Empleado)
+Hacer toTransfer y constructores con transfer en las Entidades (IMPORTANTE)
+Añadir constructores y toString en los transfer
+Tratar activo en Buscar
+Para el direccionamiento de vistas, pasamos por el controlador sin ejecutar ningun comando
+Añadir atributo version a las entidades
+En mostrar todos turnos hay dos factorias de entity manager
+Cambiar los add al tipo collection
+Cambiar los bucles  [0,*]
+Modificar o eliminar id_marca en producto
+Para cada atributo considerar añadir alguno propiedad/caracteristica del apartado JPA Avanzado (Column, Generated Value...)
+Añadir los transfer necesarios a las vistas
+Revisar mostrarPorTurno de empleado diseño
+Revisar que todos los ids sean integer
+Añadir evento a las vistas
+Revisar que cascade esté en el lado correcto
+
+- Se puede marcar como temporal date un atributo en los diagramas (Propiedades del atributo -> Perfil JPA Avanzado -> Cambiar el valor de Temporal:)
+
+DUDAS:
+- Como la función polimorfica distingue el tipo de empleado(Creacion)
+	+ Con la notacion :parametro y setParameter("parametro", valor_parametro)
+
+- Devolver venta sustituye a eliminar factura?
+	+ Si
+
+- Hay que hacer close al EntityManager despues de cada funcion?
+	+ Si
+	
+- Hay que hacer close al entitymanagerfactory despues de cada funcion?
+	+ No (No termina de quedar clara la diferencia entre close y finalize) 
+
+- Se puede hacer que la entidad Empleado (la generalizacion) sea abstracta
+	+ Se debe hacer
+
+- Se puede tener un constructor en las entidades con un Transfer
+	+ Si se puede, de hecho es recomendable junto con un toTransfer
+
+- Hay que indicar el mapped by de las relaciones MaN en diseño? Y @mapsId y @Temporal?
+	+ No (No se ha encontrado forma de hacerlo)
+
+- Se necesita un campo version para cada entidad en la base de datos?
+	+ Si
+
+- Se necesitan getters y setters para la version entidad
+	+ Hacerlos únicamente cuando sea necesario
+
+- Commit cuando da fallo, cierra la transaccion (Por si es necesario usar un rollback en caso de fallo)?
+	- Si da fallo por version desactualizada hay que capturarlo y hacer rollback
+
+- Cómo se indica lo de @Version en diseño
+	+ No se sabe
+	
+- En código sale jakarta en vez de javax, lo cambiamos?
+	+ Hecho
+
+- Se genera automátcamente el set id y el get id, lo añadimos aun asi a diseño??
+	+ (No llegamos a preguntar a Antonio) Creemos que hay que dejarlos
+	
+- Deberíamos indicar la creacion de iterator para los bucles?
+- Añadimos la vista (menus) a diseño?
+
+
+
+- Como ya tenemos los diagramas de secuencia de factura, ¿es necesario hacerlos de nuevo para factura tienda?
