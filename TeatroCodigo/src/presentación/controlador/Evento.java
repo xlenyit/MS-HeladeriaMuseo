@@ -1,0 +1,329 @@
+package presentación.controlador;
+
+public class Evento {
+	public static final int MENU = 1;
+	public static final int MENU_TIENDA = 2;
+	public static final int MENU_TEATRO = 3;
+
+	// Evento Temporada [100-200)
+	public static final int ALTA_TEMPORADA = 101;
+	public static final int ELIMINAR_TEMPORADA = 102;
+	public static final int MOSTRAR_TEMPORADA = 103;
+	public static final int MODIFICAR_TEMPORADA = 104;
+	public static final int BUSCAR_TEMPORADA = 105;
+	public static final int RES_ALTA_TEMPORADA_OK = 107;
+	public static final int RES_ALTA_TEMPORADA_KO = 108;
+	public static final int RES_ELIMINAR_TEMPORADA_OK = 109;
+	public static final int RES_ELIMINAR_TEMPORADA_KO = 110;
+	public static final int RES_BUSCAR_TEMPORADA_OK = 111;
+	public static final int RES_BUSCAR_TEMPORADA_KO = 112;
+	public static final int RES_MODIFICAR_TEMPORADA_OK = 113;
+	public static final int RES_MODIFICAR_TEMPORADA_KO = 114;
+	public static final int RES_MOSTRAR_TEMPORADA_OK = 115;
+	public static final int RES_MOSTRAR_TEMPORADA_KO = 116;
+	public static final int RES_MOSTRAR_ACTIVIDADES_T_OK = 117;
+	public static final int RES_MOSTRAR_ACTIVIDADES_T_KO = 118;
+
+	// Evento Cliente [200-300)
+	public static final int ALTA_CLIENTE = 200;
+	public static final int ELIMINAR_CLIENTE = 201;
+	public static final int MOSTRAR_CLIENTE = 202;
+	public static final int MODIFICAR_CLIENTE = 203;
+	public static final int BUSCAR_CLIENTE = 204;
+	public static final int MOSTRAR_FACTURAS_CL = 205;
+	public static final int CLIENTE_CON_MAS_FACTURACION = 220;
+	public static final int RES_ALTA_CLIENTE_OK = 206;
+	public static final int RES_ALTA_CLIENTE_KO = 207;
+	public static final int RES_ELIMINAR_CLIENTE_OK = 208;
+	public static final int RES_ELIMINAR_CLIENTE_KO = 209;
+	public static final int RES_BUSCAR_CLIENTE_OK = 210;
+	public static final int RES_BUSCAR_CLIENTE_KO = 211;
+	public static final int RES_MODIFICAR_CLIENTE_OK = 212;
+	public static final int RES_MODIFICAR_CLIENTE_KO = 213;
+	public static final int RES_MOSTRAR_CLIENTE_OK = 214;
+	public static final int RES_MOSTRAR_CLIENTE_KO = 215;
+	public static final int RES_MOSTRAR_FACTURAS_CL_OK = 216;
+	public static final int RES_MOSTRAR_FACTURAS_CL_KO = 217;
+	public static final int RES_CLIENTE_MAS_FACTURACION_OK = 218;
+	public static final int RES_CLIENTE_MAS_FACTURACION_KO = 219;
+
+	// Evento Actividad [300-400)
+	public static final int ALTA_ACTIVIDAD = 301;
+	public static final int ELIMINAR_ACTIVIDAD = 302;
+	public static final int MOSTRAR_ACTIVIDAD = 303;
+	public static final int MODIFICAR_ACTIVIDAD = 304;
+	public static final int BUSCAR_ACTIVIDAD = 305;
+	public static final int MOSTRAR_POR_COMPAÑIA = 306;
+	public static final int MOSTRAR_POR_OBRA = 307;
+	public static final int MOSTRAR_POR_TEMPORADA = 308;
+	public static final int RES_ALTA_ACTIVIDAD_OK = 309;
+	public static final int RES_ALTA_ACTIVIDAD_KO = 310;
+	public static final int RES_ELIMINAR_ACTIVIDAD_OK = 311;
+	public static final int RES_ELIMINAR_ACTIVIDAD_KO = 312;
+	public static final int RES_BUSCAR_ACTIVIDAD_OK = 313;
+	public static final int RES_BUSCAR_ACTIVIDAD_KO = 314;
+	public static final int RES_MODIFICAR_ACTIVIDAD_OK = 315;
+	public static final int RES_MODIFICAR_ACTIVIDAD_KO = 316;
+	public static final int RES_MOSTRAR_ACTIVIDAD_OK = 317;
+	public static final int RES_MOSTRAR_ACTIVIDAD_KO = 318;
+	public static final int RES_MOSTRAR_POR_COMPAÑIA_OK = 319;
+	public static final int RES_MOSTRAR_POR_COMPAÑIA_KO = 320;
+	public static final int RES_MOSTRAR_POR_OBRA_OK = 321;
+	public static final int RES_MOSTRAR_POR_OBRA_KO = 322;
+	public static final int RES_MOSTRAR_POR_TEMPORADA_OK = 323;
+	public static final int RES_MOSTRAR_POR_TEMPORADA_KO = 324;
+
+	// Evento Obra [400-500)
+	public static final int ALTA_OBRA = 400;
+	public static final int ELIMINAR_OBRA = 401;
+	public static final int MOSTRAR_OBRA = 402;
+	public static final int MODIFICAR_OBRA = 403;
+	public static final int BUSCAR_OBRA = 404;
+	public static final int OBRA_CON_REPRESENTACION_MAS_VISTA = 417;
+	public static final int RES_ALTA_OBRA_OK = 405;
+	public static final int RES_ALTA_OBRA_KO = 406;
+	public static final int RES_ELIMINAR_OBRA_OK = 407;
+	public static final int RES_ELIMINAR_OBRA_KO = 408;
+	public static final int RES_BUSCAR_OBRA_OK = 409;
+	public static final int RES_BUSCAR_OBRA_KO = 410;
+	public static final int RES_MODIFICAR_OBRA_OK = 411;
+	public static final int RES_MODIFICAR_OBRA_KO = 412;
+	public static final int RES_MOSTRAR_OBRA_OK = 413;
+	public static final int RES_MOSTRAR_OBRA_KO = 414;
+	public static final int RES_OBRA_CON_REPRESENTACION_MAS_VISTA_OK = 415;
+	public static final int RES_OBRA_CON_REPRESENTACION_MAS_VISTA_KO = 416;
+
+	// Evento Compañia [500-600)
+	public static final int ALTA_COMPAÑIA = 500;
+	public static final int ELIMINAR_COMPAÑIA = 501;
+	public static final int MOSTRAR_COMPAÑIA = 502;
+	public static final int MODIFICAR_COMPAÑIA = 503;
+	public static final int BUSCAR_COMPAÑIA = 504;
+	public static final int RES_ALTA_COMPAÑIA_OK = 505;
+	public static final int RES_ALTA_COMPAÑIA_KO = 506;
+	public static final int RES_ELIMINAR_COMPAÑIA_OK = 507;
+	public static final int RES_ELIMINAR_COMPAÑIA_KO = 508;
+	public static final int RES_BUSCAR_COMPAÑIA_OK = 509;
+	public static final int RES_BUSCAR_COMPAÑIA_KO = 510;
+	public static final int RES_MODIFICAR_COMPAÑIA_OK = 511;
+	public static final int RES_MODIFICAR_COMPAÑIA_KO = 512;
+	public static final int RES_MOSTRAR_COMPAÑIA_OK = 513;
+	public static final int RES_MOSTRAR_COMPAÑIA_KO = 514;
+
+	// Evento Miembro Compañia [600-700)
+	public static final int ALTA_MIEMBRO_COMPAÑIA = 600;
+	public static final int ELIMINAR_MIEMBRO_COMPAÑIA = 601;
+	public static final int MOSTRAR_MIEMBRO_COMPAÑIA = 602;
+	public static final int MODIFICAR_MIEMBRO_COMPAÑIA = 603;
+	public static final int BUSCAR_MIEMBRO_COMPAÑIA = 604;
+	public static final int ASIGNAR_MIEMBRO_A_COMPAÑIA = 605;
+	public static final int ELIMINAR_MIEMBRO_DE_COMPAÑIA = 606;
+	public static final int MODIFICAR_NUMERO_MESES = 607;
+	public static final int RES_ALTA_MIEMBRO_COMPAÑIA_OK = 608;
+	public static final int RES_ALTA_MIEMBRO_COMPAÑIA_KO = 609;
+	public static final int RES_ELIMINAR_MIEMBRO_COMPAÑIA_OK = 610;
+	public static final int RES_ELIMINAR_MIEMBRO_COMPAÑIA_KO = 611;
+	public static final int RES_BUSCAR_MIEMBRO_COMPAÑIA_OK = 612;
+	public static final int RES_BUSCAR_MIEMBRO_COMPAÑIA_KO = 613;
+	public static final int RES_MODIFICAR_MIEMBRO_COMPAÑIA_OK = 614;
+	public static final int RES_MODIFICAR_MIEMBRO_COMPAÑIA_KO = 615;
+	public static final int RES_MOSTRAR_MIEMBRO_COMPAÑIA_OK = 616;
+	public static final int RES_MOSTRAR_MIEMBRO_COMPAÑIA_KO = 617;
+	public static final int RES_ASIGNAR_MIEMBRO_A_COMPAÑIA_OK = 618;
+	public static final int RES_ASIGNAR_MIEMBRO_A_COMPAÑIA_KO = 619;
+	public static final int RES_ELIMINAR_MIEMBRO_DE_COMPAÑIA_OK = 620;
+	public static final int RES_ELIMINAR_MIEMBRO_DE_COMPAÑIA_KO = 621;
+	public static final int RES_MODIFICAR_NUMERO_MESES_OK = 622;
+	public static final int RES_MODIFICAR_NUMERO_MESES_KO = 623;
+
+	// Evento Factura [700-800)
+	public static final int ALTA_FACTURA = 700;
+	public static final int ELIMINAR_FACTURA = 701;
+	public static final int MOSTRAR_FACTURA = 702;
+	public static final int MODIFICAR_FACTURA = 703;
+	public static final int BUSCAR_FACTURA = 704;
+	public static final int BUSCAR_FACTURA_CL = 705;
+	public static final int RES_ALTA_FACTURA_OK = 706;
+	public static final int RES_ALTA_FACTURA_KO = 707;
+	public static final int RES_ELIMINAR_FACTURA_OK = 708;
+	public static final int RES_ELIMINAR_FACTURA_KO = 709;
+	public static final int RES_BUSCAR_FACTURA_OK = 710;
+	public static final int RES_BUSCAR_FACTURA_KO = 711;
+	public static final int RES_MODIFICAR_FACTURA_OK = 712;
+	public static final int RES_MODIFICAR_FACTURA_KO = 713;
+	public static final int RES_MOSTRAR_FACTURA_OK = 714;
+	public static final int RES_MOSTRAR_FACTURA_KO = 715;
+	public static final int RES_BUSCAR_FACTURA_CL_OK = 716;
+	public static final int RES_BUSCAR_FACTURA_CL_KO = 717;
+
+	// Evento Turno [800 - 900)
+	public static final int TURNO = 800;
+	public static final int ALTA_TURNO = 801;
+	public static final int BUSCAR_TURNO = 802;
+	public static final int ELIMINAR_TURNO = 803;
+	public static final int MOSTRAR_TURNOS = 804;
+	public static final int MODIFICAR_TURNO = 805;
+	public static final int NOMINA_TURNO = 806;
+	public static final int RES_ALTA_TURNO_OK = 807;
+	public static final int RES_BUSCAR_TURNO_OK = 808;
+	public static final int RES_ELIMINAR_TURNO_OK = 809;
+	public static final int RES_MOSTRAR_TURNOS_OK = 810;
+	public static final int RES_MODIFICAR_TURNO_OK = 811;
+	public static final int RES_NOMINA_TURNO_OK = 812;
+	public static final int RES_ALTA_TURNO_KO = 813;
+	public static final int RES_BUSCAR_TURNO_KO = 814;
+	public static final int RES_ELIMINAR_TURNO_KO = 815;
+	public static final int RES_MOSTRAR_TURNOS_KO = 816;
+	public static final int RES_MODIFICAR_TURNO_KO = 817;
+	public static final int RES_NOMINA_TURNO_KO = 818;
+	public static final int VISTA_ALTA_TURNO = 819;
+	public static final int VISTA_BUSCAR_TURNO = 820;
+	public static final int VISTA_ELIMINAR_TURNO = 821;
+	public static final int VISTA_MOSTRAR_TURNOS = 822;
+	public static final int VISTA_MODIFICAR_TURNO = 823;
+	public static final int VISTA_NOMINA_TURNO = 824;
+
+	// Evento Marca [900-1000)
+	public static final int MARCA = 900;
+	public static final int ALTA_MARCA = 901;
+	public static final int BUSCAR_MARCA = 902;
+	public static final int ELIMINAR_MARCA = 903;
+	public static final int MOSTRAR_MARCAS = 904;
+	public static final int MODIFICAR_MARCA = 905;
+	public static final int RES_ALTA_MARCA_OK = 906;
+	public static final int RES_BUSCAR_MARCA_OK = 907;
+	public static final int RES_ELIMINAR_MARCA_OK = 908;
+	public static final int RES_MOSTRAR_MARCAS_OK = 909;
+	public static final int RES_MODIFICAR_MARCA_OK = 910;
+	public static final int RES_ALTA_MARCA_KO = 911;
+	public static final int RES_BUSCAR_MARCA_KO = 912;
+	public static final int RES_ELIMINAR_MARCA_KO = 913;
+	public static final int RES_MOSTRAR_MARCAS_KO = 914;
+	public static final int RES_MODIFICAR_MARCA_KO = 915;
+	public static final int VISTA_ALTA_MARCA = 916;
+	public static final int VISTA_BUSCAR_MARCA = 917;
+	public static final int VISTA_ELIMINAR_MARCA = 918;
+	public static final int VISTA_MOSTRAR_MARCAS = 919;
+	public static final int VISTA_MODIFICAR_MARCA = 920;
+	
+	// Evento Empleado [1000 - 1100)
+	public static final int EMPLEADO = 1000;
+	public static final int ALTA_EMPLEADO = 1001;
+	public static final int BUSCAR_EMPLEADO = 1002;
+	public static final int ELIMINAR_EMPLEADO = 1003;
+	public static final int MOSTRAR_EMPLEADOS = 1004;
+	public static final int MODIFICAR_EMPLEADO = 1005;
+	public static final int MOSTRAR_POR_TURNO_EMPLEADO = 1006;
+	public static final int RES_ALTA_EMPLEADO_OK = 1007;
+	public static final int RES_BUSCAR_EMPLEADO_OK = 1008;
+	public static final int RES_ELIMINAR_EMPLEADO_OK = 1009;
+	public static final int RES_MOSTRAR_EMPLEADO_OK = 1010;
+	public static final int RES_MODIFICAR_EMPLEADO_OK = 1011;
+	public static final int RES_MOSTRAR_POR_TURNO_EMPLEADO_OK = 1012;
+	public static final int RES_ALTA_EMPLEADO_KO = 1013;
+	public static final int RES_BUSCAR_EMPLEADO_KO = 1014;
+	public static final int RES_ELIMINAR_EMPLEADO_KO = 1015;
+	public static final int RES_MOSTRAR_EMPLEADO_KO = 1016;
+	public static final int RES_MODIFICAR_EMPLEADO_KO = 1017;
+	public static final int RES_MOSTRAR_POR_TURNO_EMPLEADO_KO = 1018;
+	public static final int VISTA_ALTA_EMPLEADO = 1019;
+	public static final int VISTA_BUSCAR_EMPLEADO = 1020;
+	public static final int VISTA_ELIMINAR_EMPLEADO = 1021;
+	public static final int VISTA_MOSTRAR_EMPLEADO = 1022;
+	public static final int VISTA_MODIFICAR_EMPLEADO = 1023;
+	public static final int VISTA_MOSTRAR_POR_TURNO_EMPLEADO = 1024;
+	
+	// Evento Producto [1100 - 1200)
+	public static final int PRODUCTO = 1100;
+	public static final int ALTA_PRODUCTO = 1101;
+	public static final int BUSCAR_PRODUCTO = 1102;
+	public static final int ELIMINAR_PRODUCTO = 1103;
+	public static final int MOSTRAR_PRODUCTO = 1104;
+	public static final int MODIFICAR_PRODUCTO = 1105;
+	public static final int MOSTRAR_PRODUCTO_PROVEEDOR = 1106;
+	public static final int RES_ALTA_PRODUCTO_OK = 1107;
+	public static final int RES_BUSCAR_PRODUCTO_OK = 1108;
+	public static final int RES_ELIMINAR_PRODUCTO_OK = 1109;
+	public static final int RES_MOSTRAR_PRODUCTO_OK = 1110;
+	public static final int RES_MODIFICAR_PRODUCTO_OK = 1111;
+	public static final int MOSTRAR_PRODUCTO_PROVEEDOR_OK = 1112;
+	public static final int RES_ALTA_PRODUCTO_KO = 1113;
+	public static final int RES_BUSCAR_PRODUCTO_KO = 1114;
+	public static final int RES_ELIMINAR_PRODUCTO_KO = 1115;
+	public static final int RES_MOSTRAR_PRODUCTO_KO = 1116;
+	public static final int RES_MODIFICAR_PRODUCTO_KO = 1117;
+	public static final int MOSTRAR_PRODUCTO_PROVEEDOR_KO = 1118;
+	public static final int VISTA_ALTA_PRODUCTO = 1119;
+	public static final int VISTA_BUSCAR_PRODUCTO = 1120;
+	public static final int VISTA_ELIMINAR_PRODUCTO = 1121;
+	public static final int VISTA_MOSTRAR_PRODUCTO = 1122;
+	public static final int VISTA_MOSTRAR_PRODUCTO_PROVEEDOR = 1123;
+	public static final int VISTA_MODIFICAR_PRODUCTO = 1124;
+	
+	
+	
+	// Evento Proveedor [1200 - 1300)
+		public static final int PROVEEDOR = 1200;
+		public static final int ALTA_PROVEEDOR = 1201;
+		public static final int BUSCAR_PROVEEDOR = 1202;
+		public static final int ELIMINAR_PROVEEDOR = 1203;
+		public static final int MOSTRAR_PROVEEDOR = 1204;
+		public static final int MODIFICAR_PROVEEDOR = 1205;
+		public static final int ASIGNAR_PROVEEDOR_A_PRODUCTO = 1206;
+		public static final int DESASIGNAR_PROVEEDOR_A_PRODUCTO = 1207;
+		public static final int MOSTRAR_PROVEEDOR_PRODUCTO = 1208;
+		public static final int RES_ALTA_PROVEEDOR_OK = 1209;
+		public static final int RES_BUSCAR_PROVEEDOR_OK = 1210;
+		public static final int RES_ELIMINAR_PROVEEDOR_OK = 1211;
+		public static final int RES_MOSTRAR_PROVEEDOR_OK = 1212;
+		public static final int RES_MODIFICAR_PROVEEDOR_OK = 1213;
+		public static final int RES_MOSTRAR_PROVEEDOR_PRODUCTO_OK = 1214;
+		public static final int RES_ASIGNAR_PROVEEDOR_A_PRODUCTO_OK = 1215;
+		public static final int RES_DESASIGNAR_PROVEEDOR_A_PRODUCTO_OK = 1216;
+		public static final int RES_ALTA_PROVEEDOR_KO = 1217;
+		public static final int RES_BUSCAR_PROVEEDOR_KO = 1218;
+		public static final int RES_ELIMINAR_PROVEEDOR_KO = 1219;
+		public static final int RES_MOSTRAR_PROVEEDOR_KO = 1220;
+		public static final int RES_MODIFICAR_PROVEEDOR_KO = 1221;
+		public static final int RES_MOSTRAR_PROVEEDOR_PRODUCTO_KO = 1222;
+		public static final int RES_ASIGNAR_PROVEEDOR_A_PRODUCTO_KO = 1223;
+		public static final int RES_DESASIGNAR_PROVEEDOR_A_PRODUCTO_KO = 1224;
+		public static final int VISTA_ALTA_PROVEEDOR = 1225;
+		public static final int VISTA_BUSCAR_PROVEEDOR = 1226;
+		public static final int VISTA_ELIMINAR_PROVEEDOR = 1227;
+		public static final int VISTA_MOSTRAR_PROVEEDOR = 1228;
+		public static final int VISTA_MOSTRAR_PROVEEDOR_PRODUCTO = 1229;
+		public static final int VISTA_MODIFICAR_PROVEEDOR = 1230;
+		public static final int VISTA_ASIGNAR_PROVEEDOR_A_PRODUCTO = 1231;
+		public static final int VISTA_DESASIGNAR_PROVEEDOR_A_PRODUCTO = 1232;
+		
+		// Evento Factura Tienda [1300 - 1400)
+		public static final int FACTURA_TIENDA = 1300;
+		public static final int ALTA_FACTURA_TIENDA = 1301;
+		public static final int DEVOLVER_PRODUCTO_FACTURA_TIENDA = 1302;
+		public static final int MOSTRAR_FACTURA_TIENDA = 1303;
+		public static final int MODIFICAR_FACTURA_TIENDA = 1304;
+		public static final int BUSCAR_FACTURA_TIENDA = 1305;
+		public static final int BUSCAR_FACTURA_EMPLEADO = 1306;
+		public static final int RES_ALTA_FACTURA_OK_TIENDA = 1307;
+		public static final int RES_ALTA_FACTURA_KO_TIENDA = 1308;
+		public static final int RES_DEVOLVER_PRODUCTO_FACTURA_OK_TIENDA = 1309;
+		public static final int RES_DEVOLVER_PRODUCTO_FACTURA_KO_TIENDA = 1310;
+		public static final int RES_BUSCAR_FACTURA_OK_TIENDA = 1311;
+		public static final int RES_BUSCAR_FACTURA_KO_TIENDA = 1312;
+		public static final int RES_MODIFICAR_FACTURA_OK_TIENDA = 1313;
+		public static final int RES_MODIFICAR_FACTURA_KO_TIENDA = 1314;
+		public static final int RES_MOSTRAR_FACTURA_OK_TIENDA = 1315;
+		public static final int RES_MOSTRAR_FACTURA_KO_TIENDA = 1316;
+		public static final int RES_BUSCAR_FACTURA_EMPLEADO_OK_TIENDA = 1317;
+		public static final int RES_BUSCAR_FACTURA_EMPLEADO_KO_TIENDA = 1318;
+		public static final int VISTA_ABRIR_VENTA_TIENDA = 1319;
+		public static final int VISTA_AÑADIR_O_ELIMINAR = 1320;
+		public static final int VISTA_CERRAR_VENTA_TIENDA = 1321;
+		public static final int VISTA_BUSCAR_FACTURA_TIENDA = 1322;
+		public static final int VISTA_DEVOLVER_PRODUCTO_FACTURA_TIENDA = 1323;
+		public static final int VISTA_MODIFICAR_FACTURA_TIENDA = 1324;
+		public static final int VISTA_MOSTRAR_FACTURA_TIENDA = 1325;
+		public static final int VISTA_BUSCAR_FACTURA_EMPLEADO = 1326;
+		
+}
