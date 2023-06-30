@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+	<persistence-unit name="Teatro Codigo MS" transaction-type="RESOURCE_LOCAL">
+		<provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+		<class>negocio.turno.entidad.Turno</class>
+		<class>negocio.empleado.entidad.Empleado</class>
+		<class>negocio.empleado.entidad.EmpleadoTiempoCompleto</class>
+		<class>negocio.empleado.entidad.EmpleadoTiempoParcial</class>
+		<class>negocio.proveedor.entity.Proveedor</class>
+		<class>negocio.marca.entidad.Marca</class>
+		<class>negocio.facturaTienda.entidad.FacturaTienda</class>
+		<class>negocio.facturaTienda.entidad.LineaGuia</class>
+		<class>negocio.producto.entidad.ProductoConsumible</class>
+		<class>negocio.producto.entidad.ProductoDurable</class>
+		<class>negocio.producto.entidad.Producto</class>
+		<shared-cache-mode>NONE</shared-cache-mode>
+		<properties>
+			<property name="javax.persistence.jdbc.url" value="jdbc:mysql://teatro-database.cp7iwtc61ifu.eu-west-3.rds.amazonaws.com:3306/tienda"/>
+			<property name="javax.persistence.jdbc.user" value="admin"/>
+			<property name="javax.persistence.jdbc.password" value="adminteatro"/>
+			<property name="javax.persistence.jdbc.driver" value="org.mariadbm.jdbc.Driver"/>
+			<property name="eclipselink.ddl-generation.output-mode" value="both"/>
+			<property name="javax.persistence.jdbc.logging.level" value="INFO"/>
+			<property name="eclipselink.ddl-generation" value="drop-and-create-tables"/>
+		</properties>
+	</persistence-unit>
+</persistence>
