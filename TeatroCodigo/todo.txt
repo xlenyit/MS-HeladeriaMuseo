@@ -1,0 +1,14 @@
+TODO:
+Añadir en la VistaTienda un boton para la vista principal de cada entidad, segun se vayan creando estas
+La factoria negocio en diseño tiene errores de dependencia
+CAMBIAR EL DROP&CREATE TABLES POR UN NONE EN EL SCHEMA GENERATION DEL PERSISTENCE.XML, CUANDO SE CIERREN LAS ENTIDADES Y NO NECESITEMOS CAMBIAR LA BASE DE DATOS (IMPORTANTE) 
+Acordaros de marcar la variable version con @Version porque no hay forma de generarlo automaticamente (No que se conozca) 
+Añadir en cerrar venta el contador de cantidad. (En vista cerrar venta pasamos cantidad como 0)
+SAFacturaTienda mostrarFacturaPorEmpleado
+Revision de cascade
+
+RESIVAR PORQUE NO SE PUEDE ASIGNAR UN PROVEEDOR A 2 PRODUCTOS DIFERENTES
+
+DUDAS:
+	¿EL bonus no se utiliza en el calcular nomina?
+	¿Por qué en Mostrar Todos los Turnos, haces un List<TTurno> y no un Collection<TTurno>?
